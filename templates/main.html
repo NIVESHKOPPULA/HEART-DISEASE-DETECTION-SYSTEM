@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Detection System</title>
+    <link rel="shortcut icon" type="x-icon" href="Picsart_24-06-17_15-56-47-141.png">
+
+    <link rel="stylesheet" type="text/css" href="static\style.css">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Website Title -->
+
+    <div class="container">
+        <h2 class='container-heading'><span class="heading_font">Heart Disease Detection System</span></h2>
+        <p style="color: #f6a4a4;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 15px;
+        margin-top: 0px;">Note: The accuracy of this model is 90.16% </p>
+    </div>
+
+    <!-- Text Area -->
+    <div class="ml-container">
+        <form action="{{ url_for('predict')}}" method="POST">
+
+
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age" placeholder="Your age.."><br>
+
+
+
+            <label for="sex">Sex</label>
+            <select id="sex" name="sex">
+          <option selected>----select option----</option>
+          <option value="1">Male -1</option>
+          <option value="0">Female -0</option>
+        </select><br>
+
+
+
+            <label for="cp">Chest Pain Type</label>
+            <select id="cp" name="cp">
+          <option selected>----select option----</option>
+          <option value="0">Typical Angina -0</option>
+          <option value="1">Atypical Angina -1</option>
+          <option value="2">Non-anginal Pain -2</option>
+          <option value="3">Asymtomatic -3</option>
+        </select><br>
+
+
+
+            <label for="trestbps">Resting Blood Pressure</label>
+            <input type="text" id="trestbps" name="trestbps" placeholder="A number in range [94-200] mmHg"><br>
+
+
+
+            <label for="chol">Serum Cholesterol</label>
+            <input type="text" id="chol" name="chol" placeholder="A number in range [126-564] mg/dl"><br>
+
+
+
+            <label for="fbs">Fasting Blood Sugar</label>
+            <select id="fbs" name="fbs">
+          <option selected>----select option----</option>
+          <option value="1">Greater than 120 mg/dl -1</option>
+          <option value="0">Less than 120 mg/dl -0</option>
+        </select><br>
+
+
+
+            <label for="restecg">Resting ECG Results</label>
+            <select id="restecg" name="restecg">
+          <option selected>----select option----</option>
+          <option value="0">Normal -0</option>
+          <option value="1">Having ST-T wave abnormality -1</option>
+          <option value="2">Probable or definite left ventricular
+            hypertrophy -2</option>
+        </select><br>
+
+
+
+            <label for="thalach">Max Heart Rate </label>
+            <input type="text" id="thalach" name="thalach" placeholder="A number in range [71-202] bpm"><br>
+
+
+            <label for="exang">Exercise-induced Angina</label>
+            <select id="exang" name="exang">
+          <option selected>----select option----</option>
+          <option value="1">Yes -1</option>
+          <option value="0">No -0</option>
+        </select><br>
+
+
+            <label for="oldpeak">ST depression</label>
+            <input type="text" id="oldpeak" name="oldpeak" placeholder="ST depression, typically in [0-6.2]"><br>
+
+
+
+            <label for="slope">slope of the peak exercise ST segment</label>
+            <select id="slope" name="slope">
+          <option selected>----select option----</option>
+          <option value="0">Upsloping -0</option>
+          <option value="1">Flat -1</option>
+          <option value="2">Downsloping -2</option>
+        </select><br>
+
+
+            <label for="ca">Number of Major vessels</label>
+            <input type="text" id="ca" name="ca" placeholder="Typically in [0-4]"><br>
+
+
+
+            <label for="thal">Thalassemia</label>
+            <select id="thal" name="thal">
+          <option selected>----select option----</option>
+          <option value="0">Normal -1</option>
+          <option value="1">Fixed Defect -2</option> 
+          <option value="2">Reversible Defect -3</option>  
+        </select><br>
+
+
+
+            <input type="submit" class="my-cta-button" value="Predict">
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href="https://github.com/NIVESHKOPPULA"><i
+          class="fab fa-github fa-lg contact-icon"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/nivesh-koppula-7a4a7622b/"><i
+          class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+        <p class='footer-description'>Made by Nivesh.S.Koppula</p>
+    </div>
+
+</body>
+
+</html>

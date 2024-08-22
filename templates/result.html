@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Detection System</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="static\style.css">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Website Title -->
+    <div class="container">
+        <h2 class='container-heading'><span class="heading_font">Heart Disease Detection system</span></h2>
+        <p style="color: #f6a4a4;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 15px;
+        margin-top: 0px;">Note: The accuracy of this model is 90.16% </p>
+    </div>
+
+    <!-- Result -->
+    <div class="results">
+        {% if prediction==1 %}
+        <h1>Prediction: <span class='danger'>Oops! You have Chances of having Heart Disease.</span></h1>
+
+        {% elif prediction==0 %}
+        <h1>Prediction: <span class='safe'>Great! You are not likely to have a Heart Disease.</span></h1>
+
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href="https://github.com/NIVESHKOPPULA"><i class="fab fa-github fa-lg contact-icon"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/nivesh-koppula-7a4a7622b/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+        <p class='footer-description'>Made by Nivesh.S.Koppula</p>
+    </div>
+
+</body>
+
+</html>
